@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="1127.0" style="-fx-background-color: #2F2B43;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todolist.listar">
+    <children>
+        <AnchorPane prefHeight="519.0" prefWidth="262.0" style="-fx-background-color: #393351;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox layoutY="160.0" prefHeight="356.0" prefWidth="262.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="160.0">
+                    <children>
+                        <Button fx:id="button_incio" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#enter_inicio" prefHeight="49.0" prefWidth="262.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Inicio" textFill="WHITE">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="40.0" />
+                            </padding>
+                            <font>
+                                <Font size="18.0" />
+                            </font></Button>
+                        <Button fx:id="button_instrutor" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#enter_instrutor" prefHeight="49.0" prefWidth="262.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Instrutor" textFill="WHITE">
+                            <padding>
+                                <Insets left="40.0" />
+                            </padding>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="button_veiculo" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#enter_veiculo" prefHeight="49.0" prefWidth="262.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Veiculo" textFill="WHITE">
+                            <padding>
+                                <Insets left="40.0" />
+                            </padding>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="button_aulas" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#enter_aulas" prefHeight="49.0" prefWidth="262.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Aulas" textFill="WHITE">
+                            <padding>
+                                <Insets left="40.0" />
+                            </padding>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="button_exames" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#enter_calendarioExames" prefHeight="49.0" prefWidth="262.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Calendario Exames" textFill="WHITE">
+                            <padding>
+                                <Insets left="40.0" />
+                            </padding>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="button_cadastrar" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#enter_cadastrar" prefHeight="49.0" prefWidth="262.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Cadastrar Alunos" textFill="WHITE">
+                            <padding>
+                                <Insets left="40.0" />
+                            </padding>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <Pane layoutY="86.0" prefHeight="61.0" prefWidth="262.0" style="-fx-background-color: #FA2C56; -fx-background-radius: 5;">
+                    <children>
+                        <Label layoutX="25.0" layoutY="17.0" text=" Listas de Alunos " textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children></AnchorPane>
+        <Pane layoutX="262.0" prefHeight="649.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;">
+               <children>
+                  <Pane layoutX="158.0" layoutY="238.0" />
+               </children>
+            </Pane>
+            <TableView fx:id="idalunos" layoutY="242.0" prefHeight="410.0" prefWidth="829.0" style="-fx-background-color: #2F2B43;" stylesheets="@../css/fullpackstyling.css">
+              <columns>
+                <TableColumn id="tableMenu" fx:id="idid" minWidth="20.0" prefWidth="50.0" text="ID" />
+                <TableColumn id="tableMenu" fx:id="nameCol" prefWidth="120.0" text="Nome" />
+                  <TableColumn id="tableMenu" fx:id="dataCol" prefWidth="120.0" text="Data Nascimento" />
+                  <TableColumn fx:id="nifCol" prefWidth="100.0" style="-fx-aline: center;" text="Nif" />
+                  <TableColumn fx:id="biCol" text="BI" />
+                  <TableColumn fx:id="telefoneCol" prefWidth="100.0" text="Telefone" />
+                  <TableColumn fx:id="profCol" prefWidth="100.0" text="Profissao" />
+                  <TableColumn fx:id="categCol" prefWidth="95.0" text="Categoria" />
+                  <TableColumn fx:id="editCol" text="Profissao" />
+              </columns>
+            </TableView>
+            <Button layoutX="76.0" layoutY="59.0" mnemonicParsing="false" opacity="0.7" prefHeight="124.0" prefWidth="121.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" />
+            <Circle layoutX="140.0" layoutY="114.0" radius="30.0" strokeType="INSIDE">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.8047619047619048">
+                     <stops>
+                        <Stop color="#03b5fc" />
+                        <Stop color="#e505ce" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Circle>
+            <ImageView fitHeight="49.0" fitWidth="37.0" layoutX="122.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icons8-add-user-male-16.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="50.0" layoutY="152.0" onMouseClicked="#getAdd" prefHeight="17.0" prefWidth="174.0" text="Adicionar" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button layoutX="397.0" layoutY="72.0" mnemonicParsing="false" onMouseClicked="#refresh" opacity="0.7" prefHeight="124.0" prefWidth="121.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" />
+            <Circle layoutX="461.0" layoutY="127.0" radius="30.0" strokeType="INSIDE">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.8047619047619048">
+                     <stops>
+                        <Stop color="#03b5fc" />
+                        <Stop color="#e505ce" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Circle>
+            <ImageView fitHeight="49.0" fitWidth="37.0" layoutX="443.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icons8-synchronize-16.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="371.0" layoutY="165.0" prefHeight="17.0" prefWidth="174.0" text="Atualizar" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+                <Label fx:id="Idclose" layoutX="780.0" layoutY="6.0" onMouseClicked="#CloseOnAction" onMouseDragExited="#CloseOnAction" prefHeight="25.0" prefWidth="35.0" text="close" textFill="#f50303" />
+            <Button layoutX="560.0" layoutY="72.0" mnemonicParsing="false" onMouseClicked="#print" opacity="0.7" prefHeight="124.0" prefWidth="121.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" />
+            <Circle layoutX="624.0" layoutY="127.0" radius="30.0" strokeType="INSIDE">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.8047619047619048">
+                     <stops>
+                        <Stop color="#03b5fc" />
+                        <Stop color="#e505ce" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Circle>
+            <Label alignment="CENTER" layoutX="537.0" layoutY="165.0" prefHeight="17.0" prefWidth="174.0" text="Deletar" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

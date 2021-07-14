@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="1087.0" style="-fx-background-color: #2F2B43;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todolist.login">
+    <children>
+        <AnchorPane prefHeight="519.0" prefWidth="262.0" style="-fx-background-color: #393351;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox layoutY="160.0" prefHeight="356.0" prefWidth="262.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="160.0" />
+                <Pane layoutY="86.0" prefHeight="61.0" prefWidth="262.0" style="-fx-background-color: #FA2C56; -fx-background-radius: 5;" stylesheets="@../css/fullpackstyling.css">
+                    <children>
+                        <Label layoutX="25.0" layoutY="17.0" text="Login" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children></AnchorPane>
+        <Pane layoutX="262.0" prefHeight="649.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" />
+            <VBox layoutX="124.0" layoutY="50.0" prefHeight="537.0" prefWidth="582.0" stylesheets="@../css/fullpackstyling.css">
+               <children>
+                  <ImageView fitHeight="133.0" fitWidth="388.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/Microsoft_account-Logo.wine.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="170.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label text="Nome" textFill="#f5f0f0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="Idnome" opacity="0.74" prefHeight="25.0" prefWidth="399.0" promptText="nome">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label prefHeight="35.0" prefWidth="72.0" text="Senha" textFill="#f5f0f0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="50.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <PasswordField fx:id="idsenha" opacity="0.74" prefHeight="25.0" prefWidth="399.0" promptText="senha">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="50.0" right="50.0" />
+                     </VBox.margin>
+                 </PasswordField>
+                  <Label fx:id="InvalidoLogin" prefHeight="25.0" prefWidth="487.0" text="preenche os campos por favor" textAlignment="CENTER" textFill="#fa2c56">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="100.0" right="80.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="BotaoGuardar" mnemonicParsing="false" onAction="#loginBotaoOnAction" prefHeight="25.0" prefWidth="534.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Login" textFill="#fa2c56">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#CancelarBotaoONaction" prefHeight="25.0" prefWidth="537.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Cancelar" textFill="#fa2c56">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Label fx:id="Idclose" layoutX="780.0" layoutY="6.0" onMouseClicked="#CloseOnAction" onMouseDragExited="#CloseOnAction" prefHeight="25.0" prefWidth="35.0" text="close" textFill="#f50303" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
